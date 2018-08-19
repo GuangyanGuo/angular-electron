@@ -1,0 +1,108 @@
+/* HeroesComponent's private CSS styles */
+
+.heroes {
+  margin: 50px auto 0;
+  list-style-type: none;
+  padding: 0;
+  width: 80vw;
+  display: flex;
+  text-align: left;
+  
+}
+.heroes div {
+  width:45vw;
+}
+.heroes.has-winner div:nth-of-type(1) {
+  width: 20vw;
+}
+.heroes.has-winner div:nth-of-type(2) {
+  width: 25vw;
+}
+.heroes.has-winner div:nth-of-type(3) {
+  width: 55vw;
+}
+.heroes li {
+  position: relative;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+
+.heroes a {
+  color: #888;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+button {
+  
+  background-color: #eee; 
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+h3 {
+  font-size: 1em;
+  text-align: center;
+}
+#numDraw {
+  font-size:1em;
+  font-weight: bold; 
+  width: 50px;
+  margin-right: 50px;
+  color: #888;
+  text-align: center;
+}
+.fileInput {
+  
+  margin: 20px auto;
+  text-align: center !important;
+}
+.inputDiv {
+  width: 100vw;
+  text-align: center;
+}
+
+app-players {
+  text-align: center;
+}
+
+.draw-prize, .export-winner {
+  margin-top: 20px;
+  
+}
+
+.button-container {
+  width: 100%;
+  margin: 20px auto;
+}

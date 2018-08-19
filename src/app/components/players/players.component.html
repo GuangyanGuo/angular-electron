@@ -1,0 +1,63 @@
+
+
+
+<div id="prize-draw">
+  <div *ngIf="players.length > 2">
+    <h2>Please type in the number of draws you want:</h2>
+    <label >Number of draws:
+      <input  id="numDraw" [(ngModel)]="numDraw" />
+      <input type="checkbox" [(ngModel)]="oneWin" name="oneWin" > A player can only win once<br>
+      
+    </label>
+  </div>
+  <div class="button-container">
+    <button *ngIf="numDraw" (click)="getPlayers()" class="draw-prize">
+      Draw Winner
+    </button>
+  </div>
+  <div class="button-container">
+    <button *ngIf="winnerArr" (click)="export()" class="export-winner">
+        Export Winner
+    </button>
+  </div>
+
+
+  <ul *ngIf="winnerArr" class="heroes" [ngClass]="{'has-winner': winnerArr}">
+    <div>
+        <h3>Original Entry</h3>
+      <li *ngFor="let player of playersAsArrays">
+          
+        <span class="badge">{{player[0]}}</span> {{player[1]}}
+              
+      </li>
+      
+    </div>  
+    <div>
+        <h3>Entry Ranges</h3>
+      <li *ngFor="let player of range">
+        
+        <a >
+          from
+          <span class="badge"> {{player[1]}} </span> to
+          <span class="badge">{{player[2]}}</span> 
+        </a>
+      
+      </li>
+    </div>
+    <div *ngIf="winnerArr">
+        <h3>Entry Winners</h3>
+        <li *ngFor="let n of winnerArr">
+          
+          <a >
+            <span class="badge">
+              {{n[0]}} wins {{n.length - 3}}: 
+              {{n.slice(3).join(',')}}
+            </span>
+            
+          </a>
+        
+        </li>
+      </div>
+  </ul>
+</div>
+
